@@ -10,15 +10,523 @@
       <script src="js/html5.js"></script>
    <![endif]-->
 <link href="css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./css/slick.css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
+<script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-migrate-3.0.0.js"></script>  
+<script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/slide.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
-<body >
+<script>
+	$(function(){
+		$('.tabSet').each(function(){
+			var anchor_all = $(this).find('.tabs a'); //anchor는 a의 풀네임 모든 .tabs안에 있는 a
+			var panels_all = $(this).find('.panel'); //모든 panel(div)
+			var anchor_active = $(this).find('.tabs a.active'); //a에 active 만 있는것을 검색
+			var panels_active = anchor_active.attr('href'); // a.active의 href 값을 기억함 = 패널 id
+			$(panels_active).show();
+
+			anchor_all.each(function(){
+				var panels_active = $(this).attr('href');
+
+        $(this).click(function(event){ //.tabs a를 클릭하면 
+          event.preventDefault(); //a태그를 단 모든 이벤트화면을 고정시켜준다. 중요하다 위에 function(event)반드시추가바람
+					panels_all.hide(); //모든 div를 닫으시오
+					anchor_all.removeClass('active'); //active도 닫으시오
+					$(this).addClass('active'); //선택한 .tabs a의 active를 켜시오(새로운 탭)
+					$(panels_active).show(); // 선택한 .tabs a의 패널(내용글)도 켜시오
+				})
+			})
+		})
+	}) //jq end
+</script>
+
+<body>
 <div id="wrap">
-  <header id="header"></header>
-  <section></section>
-  <footer id="footer"></footer>
+  <div id="nav_pop">
+     <div class="navpop_inner">
+       <h1 id="nav_logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a><button class="nav_close">닫기</button></h1>
+       <ul class="depth1" >
+        <li><a href="#">해외여행</a>
+              <ul class="depth2">
+               <li><a href="#">유럽</a>
+               </li>
+               <li><a href="#">중국</a>
+               </li>
+               <li><a href="#">홍콩/대만</a>
+               </li>
+               <li><a href="#">일본</a>
+               </li>
+               <li><a href="#">호주/뉴질랜드</a>
+               </li>
+               <li><a href="#">미국/캐나다</a>
+               </li>
+               <li><a href="#">중남미/중앙아시아</a>
+               </li>
+               <li><a href="#">인도</a>
+               </li>
+            </ul>
+        </li>
+        <li><a href="#">국내여행</a>
+             <ul class="depth2">
+              <li><a href="#">제주여행</a>
+              </li>
+              <li><a href="#">내륙추천여행</a>
+              </li>
+              <li><a href="#">국내호텔</a>
+              </li>
+              <li><a href="#">국내섬여행</a>
+              </li>
+              <li><a href="#">최저특가상품</a>
+              </li>
+              <li><a href="#">국내버스여행</a>
+              </li>
+              <li><a href="#">국내기차여행</a>
+              </li>
+           </ul>
+       </li>
+       <li><a href="#">자유여행</a>
+             <ul class="depth2">
+              <li><a href="#">동남아</a>
+              </li>
+              <li><a href="#">미주/캐나다</a>
+              </li>
+              <li><a href="#">일본</a>
+              </li>
+              <li><a href="#">홍콩/마카오/대만</a>
+              </li>
+              <li><a href="#">유럽</a>
+              </li>
+           </ul>
+       </li>
+       <li><a href="#">테마여행</a>
+             <ul class="depth2">
+              <li><a href="#">크루즈</a>
+              </li>
+              <li><a href="#">골프</a>
+              </li>
+              <li><a href="#">스포츠</a>
+              </li>
+              <li><a href="#">허니문</a>
+              </li>
+           </ul>
+       </li>
+       <li><a href="#">서비스</a>
+             <ul class="depth2">
+              <li><a href="#">기획전</a>
+              </li>
+              <li><a href="#">이벤트/혜택</a>
+              </li>
+              <li><a href="#">마이페이지</a>
+              </li>
+              <li><a href="#">예약확인/결제</a>
+              </li>
+              <li><a href="#">고객센터</a>
+              </li>
+              <li><a href="#">여행후기</a>
+              </li>
+              <li><a href="#">할인쿠폰</a>
+              </li>
+              <li><a href="#">모닝멤버십</a>
+              </li>
+           </ul>
+       </li>
+           </ul>
+       </li>
+      </ul>   
+     </div>
+  </div>
+
+  <header id="header">
+    <div class="top">
+       <div class="inner">
+         <p class="top_txt"><a href="#">로그인</a><a href="#">회원가입</a><a href="#">마이페이지</a><a href="#">예약확인</a><a href="#">고객센터</a></p>
+       </div>
+    </div>
+  <div class="header_main">
+    <div class="inner">
+      <h1 id="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+      </h1>
+      <nav id="nav4">
+        <ul class="depth1" >
+                 <li><a href="#">해외여행</a>
+                   <div class="nav_box">
+                       <ul class="depth2">
+                        <li><a href="#">유럽</a>
+                        </li>
+                        <li><a href="#">중국</a>
+                        </li>
+                        <li><a href="#">홍콩/대만</a>
+                        </li>
+                        <li><a href="#">동남아</a>
+                        </li>
+                        <li><a href="#">호주/뉴질랜드</a>
+                        </li>
+                        <li><a href="#">미국/캐나다</a>
+                        </li>
+                        <li><a href="#">중남미/중앙아시아</a>
+                        </li>
+                        <li><a href="#">인도</a>
+                        </li>
+                     </ul>
+                   </div>
+                 </li>
+                 <li><a href="#">국내여행</a>
+                  <div class="nav_box">
+                      <ul class="depth2">
+                       <li><a href="#">제주여행</a>
+                       </li>
+                       <li><a href="#">내륙추천여행</a>
+                       </li>
+                       <li><a href="#">국내호텔</a>
+                       </li>
+                       <li><a href="#">국내섬여행</a>
+                       </li>
+                       <li><a href="#">최저특가상품</a>
+                       </li>
+                       <li><a href="#">국내버스여행</a>
+                       </li>
+                       <li><a href="#">국내기차여행</a>
+                       </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">자유여행</a>
+                  <div class="nav_box">
+                      <ul class="depth2">
+                       <li><a href="#">동남아</a>
+                       </li>
+                       <li><a href="#">미주/캐나다</a>
+                       </li>
+                       <li><a href="#">일본</a>
+                       </li>
+                       <li><a href="#">홍콩/마카오/대만</a>
+                       </li>
+                       <li><a href="#">유럽</a>
+                       </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">테마여행</a>
+                  <div class="nav_box">
+                      <ul class="depth2">
+                       <li><a href="#">크루즈</a>
+                       </li>
+                       <li><a href="#">골프</a>
+                       </li>
+                       <li><a href="#">스포츠</a>
+                       </li>
+                       <li><a href="#">허니문</a>
+                       </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">서비스</a>
+                  <div class="nav_box">
+                      <ul class="depth2">
+                       <li><a href="#">기획전</a>
+                       </li>
+                       <li><a href="#">이벤트/혜택</a>
+                       </li>
+                       <li><a href="#">마이페이지</a>
+                       </li>
+                       <li><a href="#">예약확인/결제</a>
+                       </li>
+                       <li><a href="#">고객센터</a>
+                       </li>
+                       <li><a href="#">여행후기</a>
+                       </li>
+                       <li><a href="#">할인쿠폰</a>
+                       </li>
+                       <li><a href="#">모닝멤버십</a>
+                       </li>
+                       
+                    </ul>
+                  </div>
+                </li>
+               
+        </ul>   
+        <div class="top_icon">
+          <a href="#" class="loupe"><img src="images/loupe.png" alt="검색"></a></div>
+          <button class="all_nav"><a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a></button>
+      </nav>
+    </div>
+  </div>
+  </header>
+ 
+  <section id="sec1" >
+      <div class="control_box">
+          <p class="control_txt1">어디로 가볼까요?</p>
+          <p class="control_txt2">가고싶은 곳을 정해주세요!</p>
+          <form action="" >
+              <div class="control_sbox1">
+                <input type="search" id="search" placeholder="어디로 가시나요?">
+              </div>
+
+              <div class="control_sbox2">
+                <p class="sbox2_txt">출발지</p>
+              <input type="search" id="search" placeholder="인천공항">
+              </div>
+
+              <div class="control_sbox3">
+                <p class="sbox3_txt">2020년 6월 1일</p>
+              <input type="search" id="search" placeholder="월요일">
+              </div>
+
+              <div class="control_sbox4">
+                <p class="sbox4_txt">인원</p>
+              <input type="search" id="search" placeholder="성인  1명">
+              </div>
+             
+              <input type="submit" class="control_button" value="검색하기">
+            
+          </form>
+      </div>
+  <div class="lazy slider" data-sizes="50vw">
+    <div>
+      <a href="#"><img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, images/first_slide.jpg" data-sizes="100vw"></a>
+    </div>
+    <div>
+      <a href="#"><img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, images/second_slide.jpg" data-sizes="100vw"></a>
+    </div>
+    <div>
+      <a href="#"><img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, images/third_slide.jpg" data-sizes="100vw"></a>
+    </div>
+    <div>
+      <a href="#"><img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, images/fourth_slide.jpg" data-sizes="100vw"></a>
+    </div>
+  </div>
+
+  </section>
+
+  <section id="sec2">
+    <div class="inner">
+    <h2>추천여행 BEST 7</h2>
+    <h3>모닝투어가 제안하는 최고의 여행지를 만나보세요</h3>
+
+
+    <div class="sec2_l">
+      <div class="sec2_l_first">
+        <a href="#" class=""><img src="images/sec2_fs.jpg" alt="이미지입니다"></a>
+        <div class="sec2_txtbox1">
+          <p class="sec2_txtbox1_txt1">베트남 속 지상낙원<br>트레블홀릭을 위한 완벽한 선택
+            </p>
+          <p class="sec2_txtbox1_txt2">[다낭] 5/6일</p>
+          <p class="sec2_txtbox1_txt1">품격있는 여행에 부담없는 금액까지!</p>
+        </div>
+      </div>
+
+      <div class="sec2_l_second">
+        <a href="#" class=""><img src="images/sec2_ss.jpg" alt="이미지입니다"></a>
+        <div class="sec2_txtbox2">
+          <p class="sec2_txtbox2_txt1">일본에서 가장 아름다운 겨울<br>눈의 나라로 오세요
+            </p>
+          <p class="sec2_txtbox2_txt2">[북해도] 료칸 1박 + 리조트 2박</p>
+          <p class="sec2_txtbox2_txt1">품격있는 여행에 부담없는 금액까지!</p>
+        </div>
+      </div>
+
+      <div class="sec2_l_third">
+        <a href="#" class=""><img src="images/sec2_ts.jpg" alt="이미지입니다"></a>
+        <div class="sec2_txtbox3">
+          <p class="sec2_txtbox3_txt1">역사와 현대가 공존하는 도시<br>새로운 중국을 경험해보세요
+            </p>
+          <p class="sec2_txtbox3_txt2">[상해] 4/5일</p>
+          <p class="sec2_txtbox3_txt1">품격있는 여행에 부담없는 금액까지!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sec2_r">
+      <div class="sec2_r_first">
+        <a href="#" class=""><img src="images/sec2_fos.jpg" alt="이미지입니다"></a>
+        <div class="sec2_txtbox4">
+          <p class="sec2_txtbox4_txt1">당신이 상상하는 낭만여행<br>이곳에서 실현해보실래요?
+          </p>
+           <p class="sec2_txtbox4_txt2">[하와이] 리조트 2박 + 풀빌라 1박</p>
+           <p class="sec2_txtbox4_txt1">품격있는 여행에 부담없는 금액까지!</p>
+        </div>
+      </div>
+
+      <div class="sec2_r_second">
+        <a href="#" class=""><img src="images/sec2_fis.jpg" alt="이미지입니다"></a>
+        <div class="sec2_txtbox5">
+          <p class="sec2_txtbox5_txt1">매일이 새로운 일상, 질리지 않는 도시<br>캐나다 감성을 한껏 느껴보세요
+          </p>
+           <p class="sec2_txtbox5_txt2">[캐나다] 4/5일</p>
+           <p class="sec2_txtbox5_txt1">품격있는 여행에 부담없는 금액까지!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+    
+
+  <section id="sec3">
+    <div class="inner">
+    <h2>번개특가</h2>
+    <h3>오늘 딱 하루만 고객님께 제공하는 특가에요!</h3>
+
+    <div class="tabSet">
+      <div class="tabset_w">
+        <p class="tabset_txt">#HOT DEAL</p>
+        <ul class="tabs">
+          <li><a href="#panel1-1" class="active">일본</a></li>
+          <li><a href="#panel1-2">미국</a></li>
+          <li><a href="#panel1-3">유럽</a></li>
+          <li><a href="#panel1-4">중국</a></li>
+          <li><a href="#panel1-5">동남아</a></li>
+
+        </ul>
+      </div>
+     
+      <div class="panels">
+        <div class="panel" id="panel1-1"><a href="#" class=""><img src="images/sec3_img1.jpg" alt="이미지입니다">
+        <div class="panel_small">
+          <p class="panel_smalltxt1">겨울 밤, 새하얀 눈으로 뒤덮힌 료칸거리와<br>가스등의 따스한 불빛이 감성적인 이곳<br>긴잔온천을 아시나요?</p>
+          <p class="panel_smalltxt2">긴잔</p>
+        
+        <a href="#" class="panel_smallgo">더보기</a>
+      </div>
+      </a>
+    </div>
+        <div class="panel" id="panel1-2"><a href="#" class=""><img src="images/sec3_img2.jpg" alt="이미지입니다">
+          <div class="panel_small">
+            <p class="panel_smalltxt1">바쁘게 움직이는 사람들, 매초마다 바뀌는 트랜드<br>세계의 중심 뉴욕에서도 가장 모던한 도시<br>멘하탄에서 세상을 들여다봐요</p>
+            <p class="panel_smalltxt2">멘하탄</p>
+          
+          <a href="#" class="panel_smallgo">더보기</a>
+        </div>
+        </a>
+      </div>
+        <div class="panel" id="panel1-3"><a href="#" class=""><img src="images/sec3_img3.jpg" alt="이미지입니다">
+          <div class="panel_small">
+            <p class="panel_smalltxt1">거리에 연주하는 예술가들, 예쁜카페에서 흐르는 모카향<br>유럽감성을 한껏 자극하는 독일의 항구도시<br>함부르크의 거리를 걸어보실래요?</p>
+            <p class="panel_smalltxt2">함부르크</p>
+          
+            <a href="#" class="panel_smallgo">더보기</a>
+        </div>
+      </a>
+      </div>
+        <div class="panel" id="panel1-4"><a href="#" class=""><img src="images/sec3_img4.jpg" alt="이미지입니다">
+          <div class="panel_small">
+            <p class="panel_smalltxt1">신선의 땅, 같은 세상 같지 않은 이곳<br>밤하늘의 별을 옮겨놓은 듯한 풍경<br>중국에서 가장 신비한 마을 </p>
+            <p class="panel_smalltxt2">먀오자이</p>
+          
+            <a href="#" class="panel_smallgo">더보기</a>
+        </div>
+      </a>
+    </div>
+        <div class="panel" id="panel1-5"><a href="#" class=""><img src="images/sec3_img5.jpg" alt="이미지입니다">
+          <div class="panel_small">
+            <p class="panel_smalltxt1">고즈넉한 타이페이 거리에서 커피 한잔<br>이국적인 분위기와 밝은 대만사람들<br>대만 특유의 감성을 느껴봐요 </p>
+            <p class="panel_smalltxt2">타이페이</p>
+          
+            <a href="#" class="panel_smallgo">더보기</a>
+        </div>
+      </a>
+    </div>
+      <!-- /panels --></div>
+    <!-- /tabset --></div>
+  
+
+    </div>
+  </section>
+
+  <section id="sec4"><a href="#"><img src="images/worldmap.jpg" alt="월드맵"><img class="worldmap_change" src="images/worldmap_change.jpg" alt="월드맵"></a></section>
+
+  <section id="sec5">
+    <div class="inner">
+    <h2>나라별 인기상품</h2>
+    <h3>고객님들이 선호하시는 여행지를 나라별로 정리해 소개해드립니다</h3>
+
+      <div class="tabSet">
+        <div class="tabset_ww">
+          <p class="tabset_txt">전세계 인기상품<br>한눈에 보기</p>
+        <ul class="tabs">
+          <li><a href="#panel2-1" class="active">미주/캐나다</a></li>
+          <li><a href="#panel2-2">일본</a></li>
+          <li><a href="#panel2-3">동남아</a></li>
+          <li><a href="#panel2-4">중국</a></li>
+          <li><a href="#panel2-5">유럽</a></li>
+          <li><a href="#panel2-6">대양주</a></li>
+
+        </ul>
+      </div>
+
+        <div class="panels">
+          <div class="panel" id="panel2-1">
+            <a href="#" class="big_img"><img src="images/america.png" alt="월드맵"></a>
+            <a href="#"><img src="images/FloridaBeach.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/san_francisco.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/NYC.jpg" alt="월드맵"></a>
+          </div>
+          <div class="panel" id="panel2-2">
+            <a href="#" class="big_img"><img src="images/JAPAN.png" alt="월드맵"></a>
+            <a href="#"><img src="images/tokyo.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/fukuoka.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/osaka.jpg" alt="월드맵"></a>
+            </div>
+          <div class="panel" id="panel2-3">
+            <a href="#" class="big_img"><img src="images/SOUTHEAST_ASIA.png" alt="월드맵"></a>
+            <a href="#"><img src="images/sebu.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/danang.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/phuket.jpg" alt="월드맵"></a>
+            </div>
+          <div class="panel" id="panel2-4">
+            <a href="#" class="big_img"><img src="images/china.png" alt="월드맵"></a>
+            <a href="#"><img src="images/beijing.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/HUNAN.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/Hainan.jpg" alt="월드맵"></a>
+            </div>
+          <div class="panel" id="panel2-5">
+            <a href="#" class="big_img"><img src="images/europe.png" alt="월드맵"></a>
+            <a href="#"><img src="images/croatia.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/hamburg.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/stockholm.jpg" alt="월드맵"></a>
+            </div>
+          <div class="panel" id="panel2-6">
+            <a href="#" class="big_img"><img src="images/australia.png" alt="월드맵"></a>
+            <a href="#"><img src="images/Queenstown.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/Sydney.jpg" alt="월드맵"></a>
+              <a href="#"><img src="images/melburin.jpg" alt="월드맵"></a>
+            </div>
+        <!-- /panels --></div>
+      <!-- /tabset --></div>
+      </div>
+  </section>
+
+  <section id="sec6">
+    <div class="inner">
+      <div class="sec6_title">
+        <img src="images/b-2.jpg" alt="전후사진제목">
+      </div>
+      <div class="sec6_cont">
+        <h2>스타 주요클리닉</h2>
+        <h3>최고의 기술과 서비스로 아름다운 세상을 만들어갑니다.</h3>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <div class="inner"></div>
+  </footer>
 </div>
 </body>
 

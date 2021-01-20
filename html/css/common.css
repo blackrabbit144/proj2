@@ -1,28 +1,19 @@
 @charset "utf-8";
 
 /*googleips 웹폰트 css 파일 불러오기*/
-@import url(https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo);
+@font-face { font-family : nexon_regular;    
+      src : url(../font/NEXONLv1GothicOTF.woff) ;  }
+ @font-face { font-family : nexon_light;    
+            src : url(../font/NEXONLv1GothicOTFLight.woff) ;  }
+ @font-face { font-family : nexon_bold;    
+                  src : url(../font/NEXONLv1GothicOTFBold.woff) ;  }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;900&display=swap');
-/*
-font-family: 'Noto Sans KR', sans-serif;
-*/
-/*font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Nanum Myeongjo', serif;
-font-family: 'Galada', cursive; */
-
-/* 저장된 글꼴 파일 선언*/
-/* @font-face { font-family : font_gothic;    
-                src : url(../font/NanumGothic.ttf); }  */
-/* 웹사이트의 글꼴 파일 선언*/
-/* @font-face { font-family : font_gothic;    
-                src : url(http://uhbee.com/nanum.eot) ; }   */
-
-
 * {margin:0; padding:0;}
 html{font-size:16px;}
 body{ font-size:16px;
       color:#6f6f6f;
-      font-family: 'Nanum Gothic', sans-serif }
+      font-family : 'nexon_light',  'Noto Sans KR', 'sans-serif';
+       }
 ul, ol, li{list-style-type:none}
 img, fieldset{border:none;vertical-align: middle}
 hr {clear:both;border:none}
@@ -37,5 +28,69 @@ input::placeholder, textarea::placeholder {
       outline: 0;}
 button{outline:0}
 
-.sound_only{display: block;text-indent:-9999999999px;
-      height:0}
+.sound_only{display: block;text-indent:-9999999999px;}
+
+/****************메인화면, 서브화면 공통영역 ************************************/
+#wrap{width:100%;min-width:1280px;overflow: hidden;}
+.inner{width:1280px;margin:0 auto;}
+
+#nav_pop{position:fixed;width:100%;min-width:1280px;height:100%;overflow: auto;
+         background-color:#fff;z-index:999999; display: none;}
+#nav_pop .navpop_inner{width:1280px;margin:0 auto;}
+#nav_pop #nav_logo{position: relative;}
+#nav_pop #nav_logo .nav_close{position:absolute;top:0;right:0}
+#nav_pop .depth1 > li {width:25%;float:left;margin-bottom: 100px;}
+#nav_pop .depth1 > li > a {font-size: 1.3rem;margin-bottom: 20px;display: block;}
+#nav_pop .depth1 ul {}
+#header .header_main {border-bottom: 1px solid rgba(255,255,255,0.5); position: absolute; 
+         width: 100%; min-width: 1280px; z-index: 99999999;
+         padding-top: 20px;}
+         
+ #header .top{
+      background-color:#FFCC54; padding-top: 16px; padding-bottom: 16px;}
+ #header .top_txt {text-align: right; font-size: 12px;}
+ #header .top_txt a {margin-left: 25px;}
+ #header .top_icon {float:left; margin-right:20px;}
+ #header .top_icon .loupe img{filter: invert(100%) sepia(0%) saturate(9%) hue-rotate(159deg) brightness(104%) contrast(104%);}
+ #header .top_icon a {display: inline-block; padding-top:20px;}
+ #header .all_nav { float:right;background: none; border: none; margin-top:25px;}
+ #header .all_nav span{display: block; width:30px; height: 5px; 
+      background-color: #fff; border-radius: 5px;
+      margin-bottom: 3px;
+      border: none;}
+  /* 네비4 - 메가네비100% */
+  #header .inner{position: relative;}  
+  #header #nav4{float:right;/*네비완료 삭제*/}
+  #nav4 .depth1 {float:left; margin-right: 100px; color:#fff;}
+
+  #nav4 .depth1 > li {float:left;padding:0 20px}
+  #nav4 .depth1 > li > a {display: block;
+          text-align: center;font-size:18px;
+          font-weight: bold;line-height:75px;}
+  #nav4 .depth1 > li > a:after {content: '';height:3px; background-color:red;
+                         position: relative;width:0;display: block;
+                         transition: 0.5s;}
+  #nav4 .depth1 > li:hover > a:after{width:100%}
+
+  #nav4 .depth1{position: static;} 
+    
+  #nav4 .nav_box {position:absolute;/*top:calc(2.8rem + 25px);*/top:78px;left:0;width:100%;
+               background-color:rgba(0,0,0,0.5);z-index:96;
+              display: none;
+              padding:10px 0; color:#fff;}
+
+  #nav4 .depth1>li:hover .nav_box{display: block;}               
+  #nav4 .nav_box .depth2{width:100%;margin:0 auto;position: relative;
+                         /*text-align: center;*/
+                         padding-left: 100px;box-sizing: border-box;}
+  #nav4 .nav_box .depth2:after{content: '';display: block;clear: both;}
+  #nav4 .nav_box .depth2 a {font-size:1rem; padding-left:10px;}
+  #nav4 .depth2 > li{display: inline-block;box-sizing: border-box;
+                  padding:10px;}
+ 
+/*header*/      
+#header #logo{float:left;display: table;}
+#header #logo a{display: table-cell;vertical-align: middle;}
+#header #logo img {width:135px;}
+#header .loupe img {width:32px;}
+/**footer/
