@@ -1,7 +1,7 @@
-h2{font-size:2.25rem; text-align: center; color: #232323;}
-h3{font-size: 1.25rem; text-align: center; margin-bottom: 50px; margin-top: 30px; color: #232323;}
-h4{font-size: 1.875rem; color: #232323;}
-
+h2{font-size:2.1rem; text-align: center; color: #232323;}
+h3{font-size: 1.2rem; text-align: center; margin-bottom: 50px; margin-top: 30px; color: #232323;}
+h4{font-size: 1.7rem; color: #232323;}
+h5{font-size: 1.5rem; color: #232323;}
 #top_popup {}
 #top_popup img{width:100%;min-width:1024px;}
 #top_popup .close{position: absolute;right:100px;top:calc(50% - 25px);text-indent: -9999999px;
@@ -306,16 +306,15 @@ section::after{content: ''; display: block; clear:both;}
        padding:105px 30px;/*border:1px solid red;*/
       position: absolute;left:0;top:0}
 #sec5 .tabset_txt {
-      font-size: 2rem; color: #fff;
+      font-size: 1.7rem; color: #fff; 
 }
 #sec5 .tabs{padding-top: 50px;}
 #sec5 .tabs li{font-size: 1.1rem; color: #fff; line-height: 42px;
                 font-weight: bolder;}
 #sec5 .tabs li a{			}
 #sec5 .ul li a:hover{		}
-#sec5 .ul li a.active{
-			background:#fff;
-			color:#31374c;
+#sec5 .tabs li a.active{
+			font-size: 1.25rem; font-weight: bolder; color:#FFB300;
 		}
 #sec5 .panels{
 	background:#fff;
@@ -338,7 +337,179 @@ section::after{content: ''; display: block; clear:both;}
 #sec5 .panel a.big_img img{width:auto;} /*a img{width:100%;} 을 주면 다같이 설정되기 때문에 얘만 따로설정*/
 /*section5 종료*/
 
-#sec6 h2,#sec6 h3{display: block;}
+/*section6 시작*/
+
+#sec6 .sec6_con1 {float: left;
+                 width:calc((100% - 20px) / 2);
+                 text-align: center;
+                 }
+#sec6 .sec6_box1 { float: left;
+                   width:calc((100% - 20px) / 2);
+                   height: 524px;
+                   box-sizing: border-box;
+                   border: 1px solid #070707;
+                   padding-top: 50px;
+                   margin-top: 50px;
+                   position: relative;}
+#sec6 .sec6_box1_content {width:100%; padding-bottom: 40px;}
+#sec6 .sec6_box_txt1 {font-size:1.4rem;
+      font-weight: bolder; padding-bottom: 30px;}
+#sec6 .sec6_box_txt2 {font-size: 0.85rem;
+      font-weight: normal; }
+#sec6 .sec6_box_txt3 {font-size: 0.85rem;position:absolute; right:0; bottom:0;
+      }
+
+#sec6 .sec6_box2 {float: right;
+                 width:calc((100% - 20px) / 2);
+                 height: 524px;
+                 box-sizing: border-box;
+                 border: 1px solid #070707;
+                 padding-top: 50px;
+                 margin-top: 50px;
+                 position: relative;}
+#sec6 .sec6_box2_content {width:100%; padding-bottom: 40px;}
+
+
+#sec6 .sec6_con2 {float: right;
+                 width:calc((100% - 20px) / 2);}
+#sec6 .sec6_con2_img1 {padding-top: 50px; padding-bottom:14px;}
+#sec6 .sec6_con2 img{width:100%;}
+/*section6 종료*/
+/*#sec6 h2,#sec6 h3{display: block;}
 #sec6 .sec6_title{width:400px;float:left;margin-right:35px;}
 #sec6 .sec6_title img{width:100%}
-#sec6 .sec6_cont{width:calc(100% - 435px); float:left;}
+#sec6 .sec6_cont{width:calc(100% - 435px); float:left;}*/
+
+/*section7 시작*/
+#sec7 {border-bottom: 1px solid #707070;}
+#sec7_total {border-bottom: 1px solid #707070;}
+#sec7 .sec7_con1 {width:35%; float: left; 
+                  box-sizing: border-box;}
+#sec7 .sec7_news {padding-right: 40px; border-bottom: 1px solid #707070;}
+#sec7 .sec7_news h5 {position:relative;}
+#sec7 .sec7_news .news7_plus {position:absolute; right:0; top: 0;}
+
+#sec7 .sec7_news .news7_ul {padding-top:30px;}
+#sec7 .sec7_news .news7_ul li {margin-bottom: 13px; position: relative; padding-left:30px;}
+#sec7 .sec7_news .news7_ball {content: ''; display: block;
+      width:5px; height: 5px; background-color: #707070; 
+      border-radius: 50%;
+      position:absolute; left: 0; top: 6px;}
+#sec7 .sec7_news .news7_ul a {font-size: 0.9rem;}
+#sec7 .sec7_news .news7_date {float: right;}
+
+#sec7 .sec7_question {padding-top: 50px;}
+#sec7 .sec7_question h5 {position:relative;}
+#sec7 .sec7_question .question7_plus {position:absolute; right:40px; top: 0;}
+#sec7 .question7_txt {font-size: 0.7rem; padding-top:3px;}
+
+#sec7 .question7_ul {padding-top:30px;}
+#sec7 .question7_ul li {margin-right:30px; border-bottom: 1px solid #707070; padding-bottom: 10px; padding-top: 10px; }
+#sec7 .question7_litxt1 {font-size: 1rem; }
+#sec7 .question7_litxt2 {text-align: right;}
+#sec7 .question7_litxt2 .litxt2_span {padding-right: 50px;}
+#sec7 .question7_ul a {font-size: 0.9rem;}
+
+
+#sec7 .sec7_con2 {width:65%; float: left; border-left: 1px solid #707070; box-sizing: border-box;}
+#sec7 .sec7_info {border-bottom: 1px solid #707070; padding-left: 50px; padding-bottom: 50px;}
+#sec7 .sec7_info::after {content: ''; display: block; clear: both;}
+
+#sec7 .sec7_info .info_top {width:642px; padding-top: 50px; padding-bottom: 50px;}
+#sec7 .sec7_info .info_top li {float: left;
+                               width:170px; height: 170px;
+                               box-sizing: border-box;
+                               margin-right: 20px; margin-bottom: 20px;  text-align: center;
+                              background-color: orange;
+                              padding-top: 25px;}
+#sec7 .sec7_info .info_top ul img {width: 60%; padding-bottom: 10px;}  
+#sec7 .sec7_info .info_top ul p {font-size: 1rem;
+                                 font-weight: bold;
+                                 color:#000} 
+
+
+
+#sec7 .sec7_faq {padding-left: 50px; padding-top: 30px; padding-bottom: 30px;}
+#sec7 .sec7_faq::after{content: ''; display: block; clear: both;}
+#sec7 .sec7_faq h5 {position: relative;}
+#sec7 .sec7_faq .faq_plus {position: absolute; right:20px; top:0;}
+#sec7 .sec7_faq .faq_ul {padding-top:20px;}
+#sec7 .sec7_faq .faq_ul li {float:left; margin-right: 20px;
+                            width: 110px; height: 30px;
+                            box-sizing: border-box;
+                            border: 1px solid #000;
+                            text-align: center;
+                            padding-top: 5px;
+                            font-size: 0.9rem; font-weight: bold;}
+/*section7 종료*/
+
+/*section8 시작*/
+
+#sec8 {clear: both;}
+#sec8 .sec8_box1 {width:35%; float: left;  box-sizing: border-box; padding-top: 50px;
+                  padding-left: 30px;}
+
+#sec8 .box1_first_txt1 {font-size: 20px; font-weight: bold; padding-bottom: 5px;}
+#sec8 .box1_first_txt2 {font-size: 40px;
+                         font-family : nexon_bold; padding-bottom: 30px;}
+#sec8 .box1_first_txt3 {font-size: 35px;
+                        font-family: nexon_bold;}
+#sec8 .sec8_box1_second {padding-right: 200px;
+                         padding-top: 40px; padding-bottom: 30px;
+                        font-size: 15px; text-align: right;}
+#sec8 .box1_second_txt1 {font-size: 1rem; font-weight: bolder; padding-bottom: 3px;}
+#sec8 .box1_second_txt2 {font-size: 1rem; font-weight: bolder;}
+
+#sec8 .sec8_box2 {width:65%; float: right; box-sizing: border-box; padding-top: 50px;}
+#sec8 .sec8_box2 .sec8_box2_first {width: 50%; float: left;}
+#sec8 .sec8_box2 .sec8_box2_second {width: 50%; float: left;}
+
+#sec8 .sec8_box2_first {position: relative;}
+#sec8 .box2_first_txt1 {font-size: 20px; font-weight: bold;}
+#sec8 .box2_first_txt2 {font-size: 20px; font-weight: bold; font-family: nexon_bold;
+                        padding-top: 20px; padding-bottom: 20px;}
+#sec8 .box2_first_txt3 {font-size: 18px; font-weight: bold; 
+                        padding-bottom: 80px;}
+#sec8 .sec8_box2_ball {position: absolute; content:''; display: block;
+                       width: 6px; height: 6px; background-color: #707070;
+                       border-radius: 50%; left: -16px; top: 117px;}
+#sec8 .box2_first_txt4 {font-size: 1rem; font-weight: bold;}
+
+#sec8 .sec8_box2 .second_sub2 {position:relative;}
+#sec8 .second_sub1 .second_sub1_txt1 {font-size: 20px; font-weight: bold;}
+#sec8 .second_sub1 .second_sub1_txt2 {font-size: 18px; font-weight: bold;
+                                      padding-top: 20px; padding-bottom: 40px;}
+#sec8 .sec8_box2 .sec8_box2_second .second_sub2 img {width:5%; position: absolute; top: 0; left: 0;}
+#sec8 .second_sub2 .second_sub2_txt1 {font-size: 18px; font-weight: bold; padding-left: 30px;}
+#sec8 .second_sub2 .second_sub2_txt2 {font-size: 15px;}
+
+#sec8 .second_sub3 .second_sub3_txt1 {font-size: 18px; font-weight: bold; padding-top: 20px; padding-left: 30px;}
+#sec8 .second_sub3 .second_sub3_txt2 {font-size: 15px;}
+
+#sec8 .sec8_box2 .second_sub3 {position:relative;}
+#sec8 .sec8_box2 .sec8_box2_second .second_sub3 img {width:5%; position: absolute; top: 20px; left: 0;}
+/*section8 종료*/s
+
+/*section9 시작*/
+
+#sec9 {clear:both;}
+#sec9::after{content: ''; display: block; clear: both;}
+#sec9 .sec9_total {width: 100%; height: 284px; background-color: #FFCC54;}
+#sec9 .sec9_total::after{content:''; display: block; clear: both;}
+#sec9 .sec9_topbox {float:right;}
+#sec9 .sec9_leftbox {padding-top:100px;}
+
+
+#sec9 .sec9_rightbox {float: right;}
+
+#sec9 .sec9_rightbox_ul1::after{content: ''; display: block; clear: both;}
+#sec9 .sec9_rightbox_ul1 li {float:right; margin-right: 10px;}
+#sec9 .sec9_rightbox_ul1 li a {border-right: 1px solid #707070; padding-right: 20px;}
+
+#sec9 .sec9_rightbox_ul2::after {content: ''; display: block; clear: both;}
+#sec9 .sec9_rightbox_ul2 li {float:right; margin-right: 10px;}
+#sec9 .sec9_rightbox_ul2 li a {border-right: 1px solid #707070; padding-right: 20px;}
+
+
+
+/*section9 종료*/

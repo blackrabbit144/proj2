@@ -47,8 +47,8 @@ button{outline:0}
          padding-top: 20px;}
          
  #header .top{
-      background-color:#FFCC54; padding-top: 16px; padding-bottom: 16px;}
- #header .top_txt {text-align: right; font-size: 12px;}
+      background-color:#FFCC54; padding-top: 10px; padding-bottom: 10px;}
+ #header .top_txt {text-align: right; font-size: 12px; font-weight: bolder;}
  #header .top_txt a {margin-left: 25px;}
  #header .top_icon {float:left; margin-right:20px;}
  #header .top_icon .loupe img{filter: invert(100%) sepia(0%) saturate(9%) hue-rotate(159deg) brightness(104%) contrast(104%);}
