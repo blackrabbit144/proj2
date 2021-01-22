@@ -2,7 +2,10 @@ $(function(){
     $(".lazy").slick({
         lazyLoad: 'ondemand', // ondemand progressive anticipated
         infinite: true,
-        dots:true
+        dots:true,
+        autoplay : true,
+        speed : 670,
+        autoplaySpeed : 3700
     });
     $(".regular").slick({
         dots: false,

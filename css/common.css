@@ -35,31 +35,48 @@ button{outline:0}
 .inner{width:1280px;margin:0 auto;}
 
 #nav_pop{position:fixed;width:100%;min-width:1280px;height:100%;overflow: auto;
-         background-color:#fff;z-index:999999; display: none;}
+         background-color:#FFB300;z-index:999999999; display: none;}
 #nav_pop .navpop_inner{width:1280px;margin:0 auto;}
-#nav_pop #nav_logo{position: relative;}
-#nav_pop #nav_logo .nav_close{position:absolute;top:0;right:0}
-#nav_pop .depth1 > li {width:25%;float:left;margin-bottom: 100px;}
-#nav_pop .depth1 > li > a {font-size: 1.3rem;margin-bottom: 20px;display: block;}
-#nav_pop .depth1 ul {}
+#nav_pop #nav_logo{position: relative; padding-left: 100px;}
+
+#nav_pop #nav_logo .nav_close{position:absolute;top:70px;right:200px;width:80px;height:80px;
+                          background:none;border:none}
+#nav_pop #nav_logo .nav_close span {display: block; width:80px; height: 1px;
+                                      background-color: #fff; border-radius: 5px;
+                                      position:absolute}
+#nav_pop #nav_logo .nav_close span:first-child {
+                                            transform: rotate(45deg)}
+#nav_pop #nav_logo .nav_close span:last-child {
+                                                transform: rotate(-45deg)}
+
+#nav_pop .depth1 {padding-top: 100px; padding-left: 100px;}
+#nav_pop .depth1_li {width:20%;float:left;margin-bottom: 100px; padding-right: 30px; 
+                     box-sizing: border-box;}
+#nav_pop .depth1_li > a {font-family: nexon_bold; font-size: 1.4rem;
+                         margin-bottom: 20px;display: block;
+                         border-bottom: 1px solid #707070; 
+                         padding-bottom: 10px;}
+#nav_pop .depth2 li {padding-bottom: 20px;}
+#nav_pop .depth2 li > a {font-size: 1rem; font-weight: bold;}
+
 #header .header_main {border-bottom: 1px solid rgba(255,255,255,0.5); position: absolute; 
          width: 100%; min-width: 1280px; z-index: 99999999;
          padding-top: 20px;}
          
  #header .top{
-      background-color:#FFCC54; padding-top: 10px; padding-bottom: 10px;}
+      background-color:#FFCC54; padding-top: 12px; padding-bottom: 12px;}
  #header .top_txt {text-align: right; font-size: 12px; font-weight: bolder;}
  #header .top_txt a {margin-left: 25px;}
  #header .top_icon {float:left; margin-right:20px;}
  #header .top_icon .loupe img{filter: invert(100%) sepia(0%) saturate(9%) hue-rotate(159deg) brightness(104%) contrast(104%);}
  #header .top_icon a {display: inline-block; padding-top:20px;}
  #header .all_nav { float:right;background: none; border: none; margin-top:25px;}
- #header .all_nav span{display: block; width:30px; height: 5px; 
+ #header .all_nav span{display: block; width:40px; height: 5px; 
       background-color: #fff; border-radius: 5px;
       margin-bottom: 3px;
       border: none;}
   /* 네비4 - 메가네비100% */
-  #header .inner{position: relative;}  
+  #header .inner{position: relative;}   
   #header #nav4{float:right;/*네비완료 삭제*/}
   #nav4 .depth1 {float:left; margin-right: 100px; color:#fff;}
 
@@ -67,7 +84,7 @@ button{outline:0}
   #nav4 .depth1 > li > a {display: block;
           text-align: center;font-size:18px;
           font-weight: bold;line-height:75px;}
-  #nav4 .depth1 > li > a:after {content: '';height:3px; background-color:red;
+  #nav4 .depth1 > li > a:after {content: '';height:3px; background-color:#7bed9f;
                          position: relative;width:0;display: block;
                          transition: 0.5s;}
   #nav4 .depth1 > li:hover > a:after{width:100%}

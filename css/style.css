@@ -2,14 +2,8 @@ h2{font-size:2.1rem; text-align: center; color: #232323;}
 h3{font-size: 1.2rem; text-align: center; margin-bottom: 50px; margin-top: 30px; color: #232323;}
 h4{font-size: 1.7rem; color: #232323;}
 h5{font-size: 1.5rem; color: #232323;}
-#top_popup {}
-#top_popup img{width:100%;min-width:1024px;}
-#top_popup .close{position: absolute;right:100px;top:calc(50% - 25px);text-indent: -9999999px;
-                background:none;border:0;}
-#top_popup .close:before{content:'';display:block;width:2px; height:50px;background-color:#000;
-                   transform:rotate(45deg);position:absolute;top:0px;}
-#top_popup .close:after{content:'';display:block;width:2px; height:50px;background-color:#000;
-    transform:rotate(-45deg);position:absolute;top:0px;}
+
+
 
 /*********************section****************************/
 section::after{content: ''; display: block; clear:both;}
@@ -137,8 +131,8 @@ section::after{content: ''; display: block; clear:both;}
 #sec2 .sec2_l {float: left;}
 #sec2 .sec2_l > div,#sec2 .sec2_r > div{ position: relative;}
 #sec2 .sec2_l_first {margin-bottom: 17px;}
-#sec2 .sec2_txtbox1 {position: absolute; width:524px;
-                     top:50px; right:50px; z-index: 99999;
+#sec2 .sec2_txtbox1 {position: absolute; width:500px;
+                     top:90px; right:150px; z-index: 99999;
                      background-color: rgba(0,0,0,0.5);
                      padding-top: 50px; padding-bottom: 50px;}
 
@@ -146,52 +140,57 @@ section::after{content: ''; display: block; clear:both;}
                                         font-weight: normal; color:#fff;}
 #sec2 .sec2_txtbox1 .sec2_txtbox1_txt2 {text-align: center; font-size: 1.3rem;
                                         font-weight: normal; color:#8467FF;
-                                        padding-top: 10px; padding-bottom: 10px;}
+                                        padding-top: 10px; padding-bottom: 10px;
+                                        font-weight: bold;}
 #sec2 .sec2_l_second {float: left;}
 #sec2 .sec2_txtbox2 {position: absolute; width:301px;
                      top:50px; right:50px; z-index: 99999;
                      background-color: rgba(0,0,0,0.5);
                      padding-top: 30px; padding-bottom: 30px;}
 
-#sec2 .sec2_txtbox2 .sec2_txtbox2_txt1 {text-align: center; font-size: 1rem;
+#sec2 .sec2_txtbox2 .sec2_txtbox2_txt1 {text-align: center; font-size: 0.9rem;
                                         font-weight: normal; color:#fff;}
-#sec2 .sec2_txtbox2 .sec2_txtbox2_txt2 {text-align: center; font-size: 1.3rem;
+#sec2 .sec2_txtbox2 .sec2_txtbox2_txt2 {text-align: center; font-size: 1.1rem;
                                           font-weight: normal; color:#9AF5FF;
-                                          padding-top: 10px; padding-bottom: 10px;}
+                                          padding-top: 10px; padding-bottom: 10px;
+                                          font-weight: bold;}
 #sec2 .sec2_l_third {float: right;}
 #sec2 .sec2_txtbox3 {position: absolute; width:301px;
       top:50px; right:50px; z-index: 99999;
       background-color: rgba(0,0,0,0.5);
       padding-top: 30px; padding-bottom: 30px;}
 
-#sec2 .sec2_txtbox3 .sec2_txtbox3_txt1 {text-align: center; font-size: 1rem;
+#sec2 .sec2_txtbox3 .sec2_txtbox3_txt1 {text-align: center; font-size: 0.9rem;
                          font-weight: normal; color:#fff;}
-#sec2 .sec2_txtbox3 .sec2_txtbox3_txt2 {text-align: center; font-size: 1.3rem;
+#sec2 .sec2_txtbox3 .sec2_txtbox3_txt2 {text-align: center; font-size: 1.1rem;
                            font-weight: normal; color:#FFFF78;
-                           padding-top: 10px; padding-bottom: 10px;}
+                           padding-top: 10px; padding-bottom: 10px;
+                           font-weight: bold;}
 
 #sec2 .sec2_r {float: right;}
 #sec2 .sec2_r_first {margin-bottom: 12px;}
 #sec2 .sec2_txtbox4 {position: absolute; width:301px;
-                     top:50px; right:50px; z-index: 99999;
+                     top:40px; right:70px; z-index: 99999;
                      background-color: rgba(0,0,0,0.5);
                      padding-top: 50px; padding-bottom: 50px;}
 
-#sec2 .sec2_txtbox4 .sec2_txtbox4_txt1 {text-align: center; font-size: 1rem;
+#sec2 .sec2_txtbox4 .sec2_txtbox4_txt1 {text-align: center; font-size: 0.9rem;
                                          font-weight: normal; color:#fff;}
-#sec2 .sec2_txtbox4 .sec2_txtbox4_txt2 {text-align: center; font-size: 1.3rem;
+#sec2 .sec2_txtbox4 .sec2_txtbox4_txt2 {text-align: center; font-size: 1.1rem;
                                           font-weight: normal; color:#ADFF8B;
-                                          padding-top: 10px; padding-bottom: 10px;}
+                                          padding-top: 10px; padding-bottom: 10px;
+                                          font-weight: bold;}
 #sec2 .sec2_txtbox5 {position: absolute; width:301px;
-                        top:50px; right:50px; z-index: 99999;
+                        top:80px; right:70px; z-index: 99999;
                         background-color: rgba(0,0,0,0.5);
                         padding-top: 50px; padding-bottom: 50px;}
                            
-#sec2 .sec2_txtbox5 .sec2_txtbox5_txt1 {text-align: center; font-size: 1rem;
+#sec2 .sec2_txtbox5 .sec2_txtbox5_txt1 {text-align: center; font-size: 0.9rem;
                                           font-weight: normal; color:#fff;}
-#sec2 .sec2_txtbox5 .sec2_txtbox5_txt2 {text-align: center; font-size: 1.3rem;
+#sec2 .sec2_txtbox5 .sec2_txtbox5_txt2 {text-align: center; font-size: 1.1rem;
                                           font-weight: normal; color:#FF4665;
-                                          padding-top: 10px; padding-bottom: 10px;}
+                                          padding-top: 10px; padding-bottom: 10px;
+                                          font-weight: bold;}
 /*section2 종료*/
 
 /*section3 시작*/
@@ -208,17 +207,15 @@ section::after{content: ''; display: block; clear:both;}
              padding-top: 10px; padding-bottom: 10px;}
 #sec3	 .tabs li{padding-top: 30px; padding-bottom: 10px; position: relative;
                font-size: 1.25rem; font-weight: bolder;}
-#sec3	 .tabs li > a.active{border-bottom: 2px solid #434343;}
-#sec3	 .tabs li > a.active:before{content: '';display: block;
+#sec3	 .tabs li.on > a{border-bottom: 2px solid #434343;}
+#sec3	 .tabs li.on > a:before{content: '';display: block;
                width:8px;height:8px;background-color:#434343;border-radius: 50%;
                position: absolute; left:-30px; top:37px; } /*before 는 앞에 제작한다는말*/
 #sec3	 .tabs li a{display:block; padding-bottom: 3px;}
 		#sec3	.ul li a:hover{
 			text-decoration:underline;
 		}
-		#sec3	.ul li a.active{
-			
-		}
+		
 		#sec3	.ul li a.active:hover{
 			text-decoration:none;
 		}
@@ -356,7 +353,7 @@ section::after{content: ''; display: block; clear:both;}
       font-weight: bolder; padding-bottom: 30px;}
 #sec6 .sec6_box_txt2 {font-size: 0.85rem;
       font-weight: normal; }
-#sec6 .sec6_box_txt3 {font-size: 0.85rem;position:absolute; right:0; bottom:0;
+#sec6 .sec6_box_txt3 {font-size: 0.85rem;position:absolute; right:20px; bottom:20px;
       }
 
 #sec6 .sec6_box2 {float: right;
@@ -420,12 +417,21 @@ section::after{content: ''; display: block; clear:both;}
                                width:170px; height: 170px;
                                box-sizing: border-box;
                                margin-right: 20px; margin-bottom: 20px;  text-align: center;
-                              background-color: orange;
                               padding-top: 25px;}
-#sec7 .sec7_info .info_top ul img {width: 60%; padding-bottom: 10px;}  
+#sec7 .sec7_info .info_top_li1 {background-color: #eccc68;}
+#sec7 .sec7_info .info_top_li2 {background-color: #ffa502;}
+#sec7 .sec7_info .info_top_li3 {background-color: #7bed9f;}  
+#sec7 .sec7_info .info_top_li4 {background-color: #2ed573;}  
+#sec7 .sec7_info .info_top_li5 {background-color: #70a1ff;}  
+#sec7 .sec7_info .info_top_li6 {background-color: #1e90ff;}  
+
+#sec7 .sec7_info .info_top li img {filter: invert(100%) sepia(0%) saturate(9%) hue-rotate(159deg) brightness(104%) contrast(104%);}
+
+#sec7 .sec7_info .info_top ul img {width: 55%; padding-bottom: 10px;}  
 #sec7 .sec7_info .info_top ul p {font-size: 1rem;
                                  font-weight: bold;
-                                 color:#000} 
+                                 color:#fff;
+                                 padding-top: 3px;} 
 
 
 
@@ -494,21 +500,25 @@ section::after{content: ''; display: block; clear:both;}
 
 #sec9 {clear:both;}
 #sec9::after{content: ''; display: block; clear: both;}
-#sec9 .sec9_total {width: 100%; height: 284px; background-color: #FFCC54;}
+#sec9 .sec9_total {width: 100%; padding:30px 0 ; background-color: #FFCC54;}
 #sec9 .sec9_total::after{content:''; display: block; clear: both;}
-#sec9 .sec9_topbox {float:right;}
-#sec9 .sec9_leftbox {padding-top:100px;}
+#sec9 .sec9_topbox {float:right; padding-top: 0px; padding-bottom: 20px; position: relative;}
+#sec9 .sec9_topbox_sbox {position: absolute; top:25px; right:200px;
+                         width: 1080px; border-bottom: 1.5px solid #fff;}
+#sec9 .sec9_leftbox {float:left;}
+#sec9 .sec9_leftbox_txt1 {margin-bottom: 20px;
+                          font-weight: bold; font-size: 16px;}
+#sec9 .sec9_leftbox_txt2 {line-height: 20px; font-size: 14px;}
 
+#sec9 .sec9_rightbox {float: right; padding-top: 40px;}
 
-#sec9 .sec9_rightbox {float: right;}
+#sec9 .sec9_rightbox_txt {margin-bottom: 3px; font-size: 14px; font-weight: normal;}
+#sec9 .sec9_rightbox_txt a {border-right: 1px solid #707070; padding-left: 10px ;padding-right: 20px;}/*a는 margin 안들어감*/
+#sec9 .sec9_rightbox_txt a:last-child {border-right:0} /*마지막 선 삭제코드*/
+#sec9 .sec9_rightbox_txt3 {font-size: 14px; font-weight: normal;
+                           opacity: 0.8;}
 
-#sec9 .sec9_rightbox_ul1::after{content: ''; display: block; clear: both;}
-#sec9 .sec9_rightbox_ul1 li {float:right; margin-right: 10px;}
-#sec9 .sec9_rightbox_ul1 li a {border-right: 1px solid #707070; padding-right: 20px;}
-
-#sec9 .sec9_rightbox_ul2::after {content: ''; display: block; clear: both;}
-#sec9 .sec9_rightbox_ul2 li {float:right; margin-right: 10px;}
-#sec9 .sec9_rightbox_ul2 li a {border-right: 1px solid #707070; padding-right: 20px;}
+#sec9 .sec9_topbox_span a img {width: 10%}
 
 
 
